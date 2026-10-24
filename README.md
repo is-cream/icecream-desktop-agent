@@ -1,6 +1,6 @@
 # Icecream Desktop Agent (Mac)
 
-Remote hands for your Mac mini. A tiny stdlib-only Python HTTP server that
+Remote hands for your Mac (Mac mini, Mac Studio, MacBook). A tiny stdlib-only Python HTTP server that
 exposes tool endpoints — shell exec, file read/write/list, screenshots, app
 launching, background jobs — behind a bearer token. Icecream (the assistant)
 reaches it directly over Tailscale: direct TCP, immediate execution, no
