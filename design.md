@@ -64,7 +64,7 @@ flowchart TB
         Awake["Keep-awake\ncaffeinate, default off"]
     end
     App -->|"prompts, coding tasks"| Agent
-    Agent -->|"HTTP :8765 + Bearer token"| Tunnel
+    Agent -->|"HTTP requests :8765 + Bearer token"| Tunnel
     Tunnel --> Ice
     Ice --> Shell
     Ice --> Files
@@ -73,8 +73,10 @@ flowchart TB
     Ice --> Apps
     Ice --> Awake
     AX --> Apps
-    Shot -->|"pixels back"| Agent
-    Shell -->|"output back"| Agent
+    Shot -->|"PNG frames"| Ice
+    Shell -->|"stdout / stderr"| Ice
+    Ice -->|"HTTP responses"| Tunnel
+    Tunnel -->|"responses"| Agent
 ```
 
 
